@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   .transition-hover {
     @apply transition duration-150  h-px w-full bg-primary mt-1 translate-y-full scale-0 group-hover:-translate-y-full group-hover:w-full group-hover:scale-100 group-hover:text-violet-900;
   }
@@ -10,20 +10,24 @@
   .title-primary {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-500;
   }
-  /* .nav-link {
-    @apply text-primary transition-all scale-100 hover:text-violet-900  hover:scale-105 visited:text-purple-100;
-  } */
-
-  .nav-link.router-link-active.router-link-exact-active {
+  .nav-link {
     @apply text-primary transition-all scale-100 hover:text-violet-900  hover:scale-105;
   }
-  .rainbow-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-600;
-  }
-  .rainbow-bg {
-    @apply bg-gradient-to-r from-primary to-pink-600;
-  }
 }
+.router-link-active div {
+  @apply text-red-600;
+}
+
+/* .nav-link.router-link-active.router-link-exact-active {
+    @apply text-primary transition-all scale-100 hover:text-violet-900  hover:scale-105;
+  } */
+.rainbow-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-600;
+}
+.rainbow-bg {
+  @apply bg-gradient-to-r from-primary to-pink-600;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.3s ease-in-out;
